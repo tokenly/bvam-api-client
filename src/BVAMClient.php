@@ -8,8 +8,8 @@ use Tokenly\APIClient\TokenlyAPI;
 class BVAMClient extends TokenlyAPI
 {
 
-    function __construct($api_base_url, $client_id=null, $client_secret=null) {
-        parent::__construct($api_base_url, null, $client_id, $client_secret);
+    function __construct($api_base_url) {
+        parent::__construct($api_base_url);
     }
     
     public function getBvamList() {

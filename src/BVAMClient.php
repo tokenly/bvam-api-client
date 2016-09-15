@@ -24,6 +24,10 @@ class BVAMClient extends TokenlyAPI
         return $this->getPublic('api/v1/asset/'.$asset_name);
     }
 
+    public function getMultipleAssetsInfo($asset_names) {
+        return $this->getPublic('api/v1/asset', ['assets' => implode(',', $asset_names)]);
+    }
+
 
     public function addBvamJson($bvam_json) {
         return $this->postPublic('api/v1/bvam', ['bvam' => $bvam_json]);

@@ -25,7 +25,7 @@ class BVAMClient extends TokenlyAPI
     }
 
     public function getMultipleAssetsInfo($asset_names) {
-        return $this->getPublic('api/v1/asset', ['assets' => implode(',', $asset_names)]);
+        return $this->getPublic('api/v1/assets', ['assets' => implode(',', $asset_names)]);
     }
 
 

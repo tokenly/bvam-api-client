@@ -9,6 +9,9 @@ class BVAMClient extends TokenlyAPI
 {
 
     function __construct($api_base_url) {
+        if($api_base_url == null){
+            $api_base_url = 'http://bvam.tokenly.com';
+        }        
         parent::__construct($api_base_url);
     }
     

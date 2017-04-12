@@ -1,6 +1,6 @@
 # Tokenly BVAM Provider client.
 
-Use this client for querying the tokenly BVAM provider
+Use this client for interacting the tokenly BVAM provider
 
 # Installation
 
@@ -11,10 +11,17 @@ Use this client for querying the tokenly BVAM provider
 composer require tokenly/bvam-api-client
 ```
 
+### Add the Service Provider
+
+Add the following to the `providers` array in your application config:
+
+```
+Tokenly\BvamApiClient\BVAMClientServiceProvider::class
+```
 
 ### Use the API
 
 ```php
-$api = new BVAMClient('https://bvam.tokenly.com');
-$asset_info = $api->getAssetInfo('SOUP');
+$bvam_client = app('Tokenly\BvamApiClient\BVAMClient');
+$asset_info = $bvam_client->getAssetInfo('SOUP');
 ```
